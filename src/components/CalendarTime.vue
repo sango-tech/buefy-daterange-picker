@@ -1,5 +1,5 @@
 <template>
-  <div class="calendar-time">
+  <div :class="{ 'calendar-time': true, 'no-seconds': !secondPicker }">
     <select v-model="hour" class="hourselect form-control mr-1">
       <option v-for="h in hours"
         :key="h" :value="h">{{h | formatNumber}}</option>

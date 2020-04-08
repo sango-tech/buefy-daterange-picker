@@ -174,7 +174,7 @@
   import Calendar from './Calendar.vue'
   import CalendarTime from './CalendarTime'
   import CalendarRanges from './CalendarRanges'
-  import {getDateUtil} from './util'
+  import { getDateUtil } from './util'
 
   export default {
     inheritAttrs: false,
@@ -310,6 +310,7 @@
           let today = new Date()
           today.setHours(0, 0, 0, 0)
           let todayEnd = new Date()
+          todayEnd.setHours(23, 59, 59, 0);
 
           let yesterday = new Date()
           yesterday.setDate(today.getDate() - 1)
@@ -325,14 +326,24 @@
 
           let thisMonthStart = new Date(today.getFullYear(), today.getMonth(), 1);
           let thisMonthEnd = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+          thisMonthEnd.setHours(23, 59, 59, 0);
+
+          let lastMonthStart = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+          let lastMonthEnd = new Date(today.getFullYear(), today.getMonth(), 0);
+          lastMonthEnd.setHours(23, 59, 59, 0);
+
+          let thisYearStart = new Date(today.getFullYear(), 0, 1);
+          let thisYearEnd = new Date(today.getFullYear(), 11, 31);
+          thisYearEnd.setHours(23, 59, 59, 0);
+
           let rangesObject = {};
 
           rangesObject[localeRanges.today] = [today, todayEnd];
           rangesObject[localeRanges.yesterday] = [yesterday, yesterdayEnd];
           rangesObject[localeRanges.last1Week] = [last1Week, todayEnd];
           rangesObject[localeRanges.thisMonth] = [thisMonthStart, thisMonthEnd];
-          rangesObject[localeRanges.lastMonth] = [new Date(today.getFullYear(), today.getMonth() - 1, 1), new Date(today.getFullYear(), today.getMonth(), 0)];
-          rangesObject[localeRanges.thisYear] = [new Date(today.getFullYear(), 0, 1), new Date(today.getFullYear(), 11, 31)];
+          rangesObject[localeRanges.lastMonth] = [lastMonthStart, lastMonthEnd];
+          rangesObject[localeRanges.thisYear] = [thisYearStart, thisYearEnd];
 
           return rangesObject;
         }
