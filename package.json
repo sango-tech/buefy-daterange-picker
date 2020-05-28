@@ -1,6 +1,6 @@
 {
   "name": "buefy-daterange-picker",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Buefy date range picker based on Buefy Vuejs",
   "author": "Binh Ho <abinh.ho@gmail.com>",
   "main": "dist/buefy-daterange-picker.umd.min.js",
