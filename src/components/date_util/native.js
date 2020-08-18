@@ -1,12 +1,12 @@
-import {dateFormat, getWeek} from '../dateformat'
+import { dateFormat, getWeek } from '../dateformat'
 
 const DateUtil = {
   isSame: (date1, date2, granularity = 'date') => {
     let dt1 = new Date(date1)
     let dt2 = new Date(date2)
-    if(granularity === 'date') {
-      dt1.setHours(0,0,0,0);
-      dt2.setHours(0,0,0,0);
+    if (granularity === 'date') {
+      dt1.setHours(0, 0, 0, 0);
+      dt2.setHours(0, 0, 0, 0);
     }
     return dt1.getTime() === dt2.getTime()
   },
@@ -35,11 +35,11 @@ const DateUtil = {
     let max_date = new Date(max);
     let min_date = new Date(min);
 
-    if(max && newDate.getTime() > max_date.getTime()) {
+    if (max && newDate.getTime() > max_date.getTime()) {
       return max_date;
     }
 
-    if(min && newDate.getTime() < min_date.getTime()) {
+    if (min && newDate.getTime() < min_date.getTime()) {
       return min_date;
     }
 
@@ -59,11 +59,11 @@ const DateUtil = {
       firstDay: 0
     };
 
-    return {...default_locale, ...options }
+    return { ...default_locale, ...options }
   },
   yearMonth: (date) => {
     let month = date.getMonth() + 1
-    return date.getFullYear() + (month < 10 ? '0':'') + month
+    return date.getFullYear() + (month < 10 ? '0' : '') + month
   },
   isValidDate: (d) => {
     return d instanceof Date && !isNaN(d);

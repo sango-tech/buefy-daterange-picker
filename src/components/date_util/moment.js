@@ -14,20 +14,20 @@ export default {
     return moment(date).format(mask)
   },
   nextMonth: (date) => {
-    return moment(date).add(1,'months').startOf('month').toDate()
+    return moment(date).add(1, 'months').startOf('month').toDate()
   },
   prevMonth: (date) => {
-    return moment(date).subtract(1,'months').startOf('month').toDate()
+    return moment(date).subtract(1, 'months').startOf('month').toDate()
   },
   validateDateRange: (newDate, min, max) => {
     let max_date = new Date(max);
     let min_date = new Date(min);
 
-    if(max && moment(newDate).isAfter(max_date)) {
+    if (max && moment(newDate).isAfter(max_date)) {
       return max_date;
     }
 
-    if(min && moment(newDate).isBefore(min_date)) {
+    if (min && moment(newDate).isBefore(min_date)) {
       return min_date;
     }
 
@@ -47,7 +47,7 @@ export default {
       firstDay: moment.localeData().firstDayOfWeek()
     };
 
-    return {...default_locale, ...options }
+    return { ...default_locale, ...options }
   },
   yearMonth: (date) => {
     return moment(date).format('YYYYMM')

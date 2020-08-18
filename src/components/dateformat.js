@@ -133,7 +133,7 @@ dateFormat.i18n = {
   ]
 };
 
-function pad (val, len) {
+function pad(val, len) {
   val = String(val);
   len = len || 2;
   while (val.length < len) {
@@ -150,7 +150,7 @@ function pad (val, len) {
  * @param  {Object} `date`
  * @return {Number}
  */
-function getWeek (date) {
+function getWeek(date) {
   // Remove time components of date
   var targetThursday = new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
@@ -179,7 +179,7 @@ function getWeek (date) {
  * @param  {Object} `date`
  * @return {Number}
  */
-function getDayOfWeek (date) {
+function getDayOfWeek(date) {
   var dow = date.getDay();
   if (dow === 0) {
     dow = 7;
@@ -192,7 +192,7 @@ function getDayOfWeek (date) {
  * @param  {*} val
  * @return {String}
  */
-function kindOf (val) {
+function kindOf(val) {
   if (val === null) {
     return 'null';
   }
@@ -213,4 +213,4 @@ function kindOf (val) {
     .slice(8, -1).toLowerCase();
 }
 
-export {dateFormat, getDayOfWeek, getWeek }
+export { dateFormat, getDayOfWeek, getWeek }

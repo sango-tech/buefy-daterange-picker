@@ -1,5 +1,5 @@
 import { isSameDay, getDaysInMonth, getISOWeek, format, addMonths, subMonths, isValid } from 'date-fns'
-import {dateFormat} from '../dateformat'
+import { dateFormat } from '../dateformat'
 
 const DateUtil = {
   isSame: (date1, date2, granularity = 'date') => {
@@ -49,7 +49,7 @@ const DateUtil = {
       firstDay: 0
     };
 
-    return {...default_locale, ...options}
+    return { ...default_locale, ...options }
   },
   yearMonth: (date) => {
     let month = date.getMonth() + 1

@@ -121,8 +121,8 @@
 
 .daterangepicker .drp-calendar {
   display: none;
-  max-width: 270px;
-  width: 270px;
+  max-width: 280px;
+  width: 280px;
 }
 
 .daterangepicker .drp-calendar.left {
@@ -236,19 +236,18 @@
 }
 
 .daterangepicker select.monthselect, .daterangepicker input.yearselect {
-  padding: 1px;
-  height: 30px;
   margin: 0;
   cursor: default;
 }
 
 .daterangepicker select.monthselect {
   margin-right: 2%;
-  width: 50%;
+  font-size: initial;
 }
 
 .daterangepicker input.yearselect {
   width: 40%;
+  box-shadow: none;
 }
 
 .daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {

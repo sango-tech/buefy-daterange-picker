@@ -6,20 +6,20 @@ const DateUtil = {
    * @param granularity
    * @return Boolean returns if the dates are the same with this granularity
    */
-  isSame: (date1, date2, granularity = 'date') => {},
+  isSame: (date1, date2, granularity = 'date') => { },
   /**
    * Get number of days in month specified by year and month
    * @param year
    * @param month
    * @return int number of days
    */
-  daysInMonth: (year, month) => {},
+  daysInMonth: (year, month) => { },
   /**
    * Return ISO week number for date
    * @param date
    * returns int the week number
    */
-  weekNumber: (date) => {},
+  weekNumber: (date) => { },
   /**
    * Formats the date object with the specified mask.
    * @see https://github.com/felixge/node-dateformat
@@ -28,19 +28,19 @@ const DateUtil = {
    * @param mask
    * return String the formatted date
    */
-  format: (date, mask) => {},
+  format: (date, mask) => { },
   /**
    * Get next month from date
    * @param date
    * @return Date the first day of the next month
    */
-  nextMonth: (date) => {},
+  nextMonth: (date) => { },
   /**
    * Get previous month from date
    * @param date
    * @return Date the first day of the previous month
    */
-  prevMonth: (date) => {},
+  prevMonth: (date) => { },
   /**
    * Validates a date base on date range [min, max]. Keeps the date in the constraint.
    * @param newDate
@@ -48,7 +48,7 @@ const DateUtil = {
    * @param max
    * @return Date the date after it has been checked if it is in the range specified.
    */
-  validateDateRange: (newDate, min, max) => {},
+  validateDateRange: (newDate, min, max) => { },
   /**
    * Returns the locale data based on passed options object.
    * @param options
@@ -68,14 +68,14 @@ const DateUtil = {
       firstDay: 0
     };
 
-    return {...default_locale, ...options }
+    return { ...default_locale, ...options }
   },
   /**
    * Returns date in the format YYYYMM
    * @param date
    * return String the date formatted
    */
-  yearMonth: (date) => {}
+  yearMonth: (date) => { }
 }
 
 export default DateUtil
