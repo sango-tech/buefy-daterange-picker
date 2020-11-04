@@ -797,16 +797,17 @@ export default {
 @import "../assets/daterangepicker.scss";
 </style>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $week-width: 0px;
 
 .reportrange-text {
   background: #fff;
   cursor: pointer;
   width: 100%;
-  input {
-    min-width: 240px;
-  }
+}
+
+.reportrange-text input {
+  min-width: 240px;
 }
 
 .daterangepicker {
