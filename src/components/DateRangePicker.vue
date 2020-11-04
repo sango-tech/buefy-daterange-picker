@@ -10,12 +10,16 @@
       -->
       <slot name="input" :startDate="start" :endDate="end" :ranges="ranges">
         <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-        <span>{{rangeText}}</span>
+        <span>{{ rangeText }}</span>
         <b class="caret"></b>
       </slot>
     </div>
     <transition name="slide-fade" mode="out-in">
-      <div class="daterangepicker dropdown-menu ltr" :class="pickerStyles" v-if="open">
+      <div
+        class="daterangepicker dropdown-menu ltr"
+        :class="pickerStyles"
+        v-if="open"
+      >
         <!--
           Optional header slot (same props as footer) @see footer slot for documentation
         -->
@@ -47,7 +51,7 @@
             <calendar-ranges
               class="column is-one-fifth"
               @clickRange="clickRange"
-              @showCustomRange="showCustomRangeCalendars=true"
+              @showCustomRange="showCustomRangeCalendars = true"
               :always-show-calendars="alwaysShowCalendars"
               :locale-data="locale"
               :ranges="ranges"
@@ -56,7 +60,10 @@
           </slot>
 
           <div class="calendars-container" v-if="showCalendars">
-            <div class="drp-calendar column left" :class="{single: singleDatePicker}">
+            <div
+              class="drp-calendar column left"
+              :class="{ single: singleDatePicker }"
+            >
               <div class="daterangepicker_input d-none d-sm-block" v-if="false">
                 <input
                   class="input-mini form-control"
@@ -152,18 +159,24 @@
             <div class="level-left"></div>
             <div class="level-right">
               <div class="level-item buttons">
-                <span class="drp-selected control" v-if="showCalendars">{{ rangeText }}</span>
+                <span class="drp-selected control" v-if="showCalendars">{{
+                  rangeText
+                }}</span>
                 <button
                   class="cancelBtn button"
                   type="button"
                   @click="clickAway"
-                >{{locale.cancelLabel}}</button>
+                >
+                  {{ locale.cancelLabel }}
+                </button>
                 <button
                   class="applyBtn button is-primary"
                   :disabled="in_selection"
                   type="button"
                   @click="clickedApply"
-                >{{locale.applyLabel}}</button>
+                >
+                  {{ locale.applyLabel }}
+                </button>
               </div>
             </div>
           </nav>
@@ -790,9 +803,10 @@ $week-width: 0px;
 .reportrange-text {
   background: #fff;
   cursor: pointer;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
   width: 100%;
+  input {
+    min-width: 240px;
+  }
 }
 
 .daterangepicker {
