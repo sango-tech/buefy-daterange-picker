@@ -242,7 +242,6 @@
 
 .daterangepicker select.monthselect {
   margin-right: 2%;
-  font-size: initial;
 }
 
 .daterangepicker input.yearselect {
@@ -318,7 +317,8 @@
 }
 
 .daterangepicker.show-calendar .ranges {
-  margin-top: 8px;
+  background: #ebf4f8;
+  font-size: 14px;
 }
 
 .daterangepicker .ranges ul {

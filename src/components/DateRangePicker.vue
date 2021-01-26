@@ -16,7 +16,7 @@
     </div>
     <transition name="slide-fade" mode="out-in">
       <div
-        class="daterangepicker dropdown-menu ltr"
+        class="daterangepicker ltr"
         :class="pickerStyles"
         v-if="open"
       >
