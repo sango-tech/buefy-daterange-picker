@@ -2,14 +2,14 @@
   "name": "buefy-daterange-picker",
   "version": "1.1.5",
   "description": "Buefy date range picker based on Buefy Vuejs",
-  "author": "Binh Ho <abinh.ho@gmail.com>",
+  "author": "Binh Ho <binh@sango-tech.com>",
   "main": "dist/buefy-daterange-picker.umd.min.js",
   "jsnext:main": "dist/buefy-daterange-picker.umd.min.js",
   "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ithot/buefy-daterange-picker"
+    "url": "https://github.com/sango-tech/buefy-daterange-picker"
   },
   "files": [
     "dist",

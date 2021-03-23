@@ -8,13 +8,17 @@
         :key="range.label"
         :class="range_class(range)"
         tabindex="0"
-      >{{range.label}}</li>
+      >
+        {{ range.label }}
+      </li>
       <li
         v-if="showCustomRangeLabel"
         :class="{ active: customRangeActive || !selectedRange }"
         @click="clickCustomRange"
         tabindex="0"
-      >{{localeData.customRangeLabel}}</li>
+      >
+        {{ localeData.customRangeLabel }}
+      </li>
     </ul>
   </div>
 </template>

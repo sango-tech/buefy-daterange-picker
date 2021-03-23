@@ -5,11 +5,17 @@
         <th class="prev available" @click="prevMonthClick" tabindex="0">
           <span />
         </th>
-        <th v-if="showDropdowns" :colspan="showWeekNumbers ? 6 : 5" class="month">
+        <th
+          v-if="showDropdowns"
+          :colspan="showWeekNumbers ? 6 : 5"
+          class="month"
+        >
           <div class="row mx-1">
             <span class="select">
               <select v-model="month" class="monthselect col">
-                <option v-for="(m) in months" :key="m.value" :value="m.value + 1">{{m.label}}</option>
+                <option v-for="m in months" :key="m.value" :value="m.value + 1">
+                  {{ m.label }}
+                </option>
               </select>
             </span>
             <input
@@ -21,7 +27,9 @@
             />
           </div>
         </th>
-        <th v-else :colspan="showWeekNumbers ? 6 : 5" class="month">{{monthName}} {{year}}</th>
+        <th v-else :colspan="showWeekNumbers ? 6 : 5" class="month">
+          {{ monthName }} {{ year }}
+        </th>
         <th class="next available" @click="nextMonthClick" tabindex="0">
           <span />
         </th>
@@ -29,21 +37,24 @@
     </thead>
     <tbody>
       <tr>
-        <th v-if="showWeekNumbers" class="week">{{locale.weekLabel}}</th>
-        <th v-for="weekDay in locale.daysOfWeek" :key="weekDay">{{weekDay}}</th>
+        <th v-if="showWeekNumbers" class="week">{{ locale.weekLabel }}</th>
+        <th v-for="weekDay in locale.daysOfWeek" :key="weekDay">
+          {{ weekDay }}
+        </th>
       </tr>
       <tr v-for="(dateRow, index) in calendar" :key="index">
-        <td
-          v-if="showWeekNumbers && (index%7 || index===0)"
-          class="week"
-        >{{$dateUtil.weekNumber(dateRow[0])}}</td>
+        <td v-if="showWeekNumbers && (index % 7 || index === 0)" class="week">
+          {{ $dateUtil.weekNumber(dateRow[0]) }}
+        </td>
         <slot name="date-slot" v-for="(date, idx) in dateRow">
           <td
             :class="dayClass(date)"
             @click="$emit('dateClick', date)"
             @mouseover="$emit('hoverDate', date)"
             :key="idx"
-          >{{date.getDate()}}</td>
+          >
+            {{ date.getDate() }}
+          </td>
         </slot>
       </tr>
     </tbody>

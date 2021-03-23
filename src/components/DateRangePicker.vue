@@ -15,11 +15,7 @@
       </slot>
     </div>
     <transition name="slide-fade" mode="out-in">
-      <div
-        class="daterangepicker ltr"
-        :class="pickerStyles"
-        v-if="open"
-      >
+      <div class="daterangepicker ltr" :class="pickerStyles" v-if="open">
         <!--
           Optional header slot (same props as footer) @see footer slot for documentation
         -->
