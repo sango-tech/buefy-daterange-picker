@@ -1,5 +1,8 @@
 # buefy-daterange-picker
 
+![Screen Shot 0003-03-29 at 10 53 12](https://user-images.githubusercontent.com/9253378/112784944-0db1cd00-907d-11eb-9f26-4a976f021c38.png)
+
+
 ## Installation
 
 ``` bash
